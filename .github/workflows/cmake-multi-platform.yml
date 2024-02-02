@@ -78,7 +78,7 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         path: |
-          build/*.lib
+          build/Release/*.lib
           build/*.a
         retention-days: 14
         name: SpellCheckLib
