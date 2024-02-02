@@ -1,5 +1,5 @@
-#include "spellchk.h"
-#include "wordlist.h"
+#include "spellchk.hpp"
+#include "wordlist.hpp"
 
 #include <iostream>
 #include <fstream>

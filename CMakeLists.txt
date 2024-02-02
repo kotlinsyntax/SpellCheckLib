@@ -3,4 +3,4 @@ project(SpellCheckLib)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(SpellCheckLib STATIC src/spellchk.cpp src/wordlist.h src/spellchk.h)
+add_library(SpellCheckLib STATIC src/spellchk.cpp src/wordlist.hpp src/spellchk.hpp)
