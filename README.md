@@ -56,7 +56,7 @@ git clone https://github.com/kotlinsyntax/SpellCheckLib.git
 2. Build the library
 
 ```sh
-cmake --build -j 8 (the more the faster the build)
+cmake --build -j 8
 ```
 
 
