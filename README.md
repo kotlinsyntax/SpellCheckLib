@@ -41,7 +41,7 @@ xxd -i .\wordlist.txt > wordlist.h
 
 ### Prerequisites
 
-* C++ 17 or higher
+* C++ 17 or higher &
 * CMake 3.27 or higher
 
 ### Installation
