@@ -8,11 +8,9 @@
 #include <vector>
 #include <algorithm>
 
-
-
 std::unordered_map<char, std::unordered_set<std::string>> dictionary;
 
-void loadHexDictionary(const unsigned char* hexDump, size_t size) {
+void loadHexDictionary(const unsigned char* hexDump, const size_t size) {
     std::string currentWord;
     for (size_t i = 0; i < size; ++i) {
         if (hexDump[i] == '\n' || hexDump[i] == '\r') {
