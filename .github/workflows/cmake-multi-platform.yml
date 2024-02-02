@@ -81,5 +81,5 @@ jobs:
           build/*.lib
           build/*.a
         retention-days: 14
-        name: LuminaryOS
+        name: SpellCheckLib
   
