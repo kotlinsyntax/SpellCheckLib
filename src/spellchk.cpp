@@ -8,6 +8,9 @@
 #include <vector>
 #include <algorithm>
 
+
+std::string locale = "en";
+
 std::unordered_map<char, std::unordered_set<std::string>> dictionary;
 
 void loadHexDictionary(const unsigned char* hexDump, const size_t size) {
