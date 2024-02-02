@@ -75,10 +75,11 @@ jobs:
       run: ctest --build-config ${{ matrix.build_type }}
   
     - name: Upload a Build Artifact
-    - uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3.1.2
       with:
-        name: SpellCheckLib
         path: |
           *.lib
           *.a
+        retention-days: 14
+        name: LuminaryOS
   
