@@ -3,7 +3,7 @@
   <h3 align="center">Spellcheck Lib</h3>
 
   <p align="center">
-    A fast C++ spell checking library
+    A fast C++ spell checking & suggestion library
     <br/>
     <br/>
   </p>
