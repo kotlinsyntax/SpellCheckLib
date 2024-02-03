@@ -1,5 +1,5 @@
-#ifndef SPELLCHECKSHARED_LIBRARY_H
-#define SPELLCHECKSHARED_LIBRARY_H
+#ifndef SPELLCHECK_LIBRARY_H
+#define SPELLCHECK_LIBRARY_H
 #include <string>
 #include <vector>
 
@@ -18,4 +18,4 @@ void loadDefaultDictionary();
 void loadHexDictionary(const unsigned char* hexDump, size_t size);
 std::vector<std::string> spell_check(const std::string& word);
 
-#endif //SPELLCHECKSHARED_LIBRARY_H
+#endif //SPELLCHECK_LIBRARY_H
