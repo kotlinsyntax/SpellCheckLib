@@ -56,21 +56,24 @@ int wf(const std::string& s1, const std::string& s2) {
     const int len1 = s1.length();
     const int len2 = s2.length();
 
-    std::vector dp(len1 + 1, std::vector(len2 + 1, 0));
+    int dp[len2 + 1];
 
-    for (int i = 0; i <= len1; ++i) {
-        for (int j = 0; j <= len2; ++j) {
-            if (i == 0) {
-                dp[i][j] = j;
-            } else if (j == 0) {
-                dp[i][j] = i;
-            } else {
-                dp[i][j] = std::min({dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (s1[i - 1] != s2[j - 1])});
-            }
+    for (int j = 0; j <= len2; ++j) {
+        dp[j] = j;
+    }
+
+    for (int i = 1; i <= len1; ++i) {
+        int diagonal = dp[0];
+        dp[0] = i;
+        const char s1_char = s1[i - 1];
+        for (int j = 1; j <= len2; ++j) {
+            const int temp = dp[j];
+            dp[j] = std::min(dp[j] + 1, std::min(dp[j - 1] + 1, diagonal + (s1_char != s2[j - 1])));
+            diagonal = temp;
         }
     }
 
-    return dp[len1][len2];
+    return dp[len2];
 }
 
 std::vector<std::string> spell_check(const std::string& word) {
