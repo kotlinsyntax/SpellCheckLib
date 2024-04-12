@@ -84,7 +84,7 @@ std::vector<std::string> spell_check(const std::string& word) {
     std::unordered_map<std::string, int> suggestions;
     for (const auto& correctWord : dictionary[word[0]]) {
         const int distance = wf(word, correctWord);
-        suggestions[correctWord + " (Distance: " + std::to_string(distance) + ")"] = distance;
+        suggestions[correctWord] = distance;
     }
 
     std::vector<std::string> result;
